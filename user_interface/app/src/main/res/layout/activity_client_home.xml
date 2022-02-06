@@ -41,7 +41,8 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button5"
-        android:textSize="40dp"/>
+        android:textSize="40dp"
+        android:onClick="portfolio"/>
 
     <Button
         android:id="@+id/button5"
