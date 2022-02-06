@@ -2,8 +2,11 @@ package com.example.user_interface;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.LinearLayout;
@@ -22,12 +25,7 @@ import java.util.List;
 
 public class BidMarketActivity extends AppCompatActivity {
 
-    //String[] currencies = {"Win XP" ,"Ishta" , "Thumula" , "ganidu" , "Chathura","Ishta" , "Thumula" , "ganidu" , "Chathura","Ishta" , "Thumula" , "ganidu" , "Chathura","Ishta" , "Thumula" , "ganidu" , "Chathura","Ishta" , "Thumula" , "ganidu" , "Chathura","Ishta" , "Thumula" , "ganidu" , "Chathura","Ishta" , "Thumula" , "ganidu" , "Chathura","Ishta" , "Thumula" , "ganidu" , "Chathura","Ishta" , "Thumula" , "ganidu" , "Chathura","Ishta" , "Thumula" , "ganidu" , "Chathura","Ishta" , "Thumula" , "ganidu" , "Chathura","Ishta" , "Thumula" , "ganidu" , "Chathura","Ishta" , "Thumula" , "ganidu" , "Chathura","Ishta" , "Thumula" , "ganidu" , "Chathura","Ishta" , "Thumula" , "ganidu" , "Chathura","Ishta" , "Thumula" , "ganidu" , "Chathura","Ishta" , "Thumula" , "ganidu" , "Chathura"} ;
     ListView listView ;
-    //String fileCurrencies ="cryptocurrency.csv";
-    //String line = "" ;
-
-
 
     private List<CurrencyObject> currencyArray = new ArrayList<CurrencyObject>() ;
 
@@ -56,38 +54,6 @@ public class BidMarketActivity extends AppCompatActivity {
     }
 
 
-
-/*
-    {
-        try {
-            br = new BufferedReader(new FileReader(fileCurrencies));
-            line = br.readLine() ;
-            while ((line = br.readLine())!=null){
-                String[] values = line.split(",");
-                currencyArray[i] = new CurrencyObject((Integer.parseInt(values[2])) , values[0] , values[1]) ;
-                i++ ;
-                System.out.println(values[0]);
-                if(i==10) break ;
-
-            }
-
-
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-*/
-
-
-    //CurrencyObject a = new CurrencyObject( 1,"BTC","Bitcoin");
-    //CurrencyObject b = new CurrencyObject(2,"OMC","Omicron");
-    //CurrencyObject currencyArray[] ={a,b};
-
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -99,8 +65,25 @@ public class BidMarketActivity extends AppCompatActivity {
         CustomAdapter customAdapter = new CustomAdapter(getApplicationContext() ,currencyArray);
         listView.setAdapter(customAdapter);
 
+        //call when the user select the relevent currency
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Intent intent = new Intent(BidMarketActivity.this , ActivityCurrency.class);
+                intent.putExtra("name", currencyArray.get(i).getName() ) ;
+                intent.putExtra("rank" , Integer.toString(currencyArray.get(i).getRank())) ;
+                intent.putExtra("symbol", currencyArray.get(i).getSymbol() ) ;
+
+                startActivity(intent);
+            }
+        });
+
 
     }
+
+
+
+
 
 
 

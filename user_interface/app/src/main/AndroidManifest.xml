@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.User_interface">
         <activity
+            android:name=".ActivityCurrency"
+            android:exported="false" />
+        <activity
             android:name=".ActivityCurrencyRow"
             android:exported="false" />
         <activity
