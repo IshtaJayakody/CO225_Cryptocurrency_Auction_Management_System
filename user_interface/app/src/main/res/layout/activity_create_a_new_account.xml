@@ -11,12 +11,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:text="Enter e-mail :"
+        android:text="Phone number :"
         android:textSize="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextPersonNameId" />
 
     <TextView
         android:id="@+id/textPassword"
@@ -28,7 +28,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextEmail" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextPhoneID" />
 
     <TextView
         android:id="@+id/textView2"
@@ -65,7 +65,7 @@
         android:onClick="createAccount"/>
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/editTextPersonNameId"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -76,11 +76,11 @@
         app:layout_constraintTop_toBottomOf="@+id/textViewEnterName" />
 
     <EditText
-        android:id="@+id/editTextEmail"
+        android:id="@+id/editTextPhoneID"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="e-mail"
+        android:hint="phone number"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -88,7 +88,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
     <EditText
-        android:id="@+id/editTextTextPassword"
+        android:id="@+id/editTextPasswordID"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
