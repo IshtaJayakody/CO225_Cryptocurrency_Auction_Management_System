@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/cryptocurrency_project/user_interface/app/src/main/res/drawable/custom_button.xml" value="0.175" />
+        <entry key="..\:/cryptocurrency_project/user_interface/app/src/main/res/drawable/custom_button_2.xml" value="0.2395" />
         <entry key="..\:/cryptocurrency_project/user_interface/app/src/main/res/layout/activity_bid_currency.xml" value="0.23641304347826086" />
         <entry key="..\:/cryptocurrency_project/user_interface/app/src/main/res/layout/activity_bid_market.xml" value="0.22813688212927757" />
         <entry key="..\:/cryptocurrency_project/user_interface/app/src/main/res/layout/activity_client_home.xml" value="0.2" />
@@ -14,6 +15,7 @@
         <entry key="..\:/cryptocurrency_project/user_interface/app/src/main/res/layout/activity_main.xml" value="0.16799999999999998" />
         <entry key="..\:/cryptocurrency_project/user_interface/app/src/main/res/layout/activity_portfolio.xml" value="0.23641304347826086" />
         <entry key="..\:/cryptocurrency_project/user_interface/app/src/main/res/layout/activity_sign_in.xml" value="0.25" />
+        <entry key="..\:/cryptocurrency_project/user_interface/app/src/main/res/layout/activity_sign_in_as_aclient.xml" value="0.264" />
         <entry key="..\:/cryptocurrency_project/user_interface/app/src/main/res/layout/activty_listview.xml" value="0.25" />
         <entry key="..\:/cryptocurrency_project/user_interface/app/src/main/res/layout/select_login.xml" value="0.2" />
       </map>

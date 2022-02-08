@@ -2,14 +2,14 @@ package com.example.user_interface;
 
 public class ClientObject {
 
-    private String clientName , password , phoneNumber  ;
-    private int accountBalance ;
+    private String clientName, password, phoneNumber;
+    private int accountBalance;
 
 
-    public ClientObject(String clientName, String password, String email) {
+    public ClientObject(String clientName, String password, String phoneNumber) {
         this.clientName = clientName;
         this.password = password;
-        this.phoneNumber = email;
+        this.phoneNumber = phoneNumber;
         this.accountBalance = 0;
     }
 
@@ -21,7 +21,7 @@ public class ClientObject {
         return password;
     }
 
-    public String getEmail() {
+    public String getPhoneNumber() {
         return phoneNumber;
     }
 
@@ -37,8 +37,8 @@ public class ClientObject {
         this.password = password;
     }
 
-    public void setEmail(String email) {
-        this.phoneNumber = email;
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
 
     public void setAccountBalance(int accountBalance) {
